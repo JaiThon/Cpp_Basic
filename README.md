@@ -2,5 +2,5 @@
 
 Cpp Self-Study
 
-i will do harder, if i do like this.
+If i do like this, i will do harder.
 Just my guess
