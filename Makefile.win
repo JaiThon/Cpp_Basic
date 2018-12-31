@@ -1,15 +1,15 @@
-# Project: Project1
+# Project: Adder
 # Makefile created by Dev-C++ 5.11
 
 CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
-OBJ      = hello.o
-LINKOBJ  = hello.o
+OBJ      = Adder.o Calculator.o main_cal.o
+LINKOBJ  = Adder.o Calculator.o main_cal.o
 LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
 INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
 CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
-BIN      = CPP.exe
+BIN      = Adder.exe
 CXXFLAGS = $(CXXINCS) 
 CFLAGS   = $(INCS) 
 RM       = rm.exe -f
@@ -24,5 +24,11 @@ clean: clean-custom
 $(BIN): $(OBJ)
 	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
 
-hello.o: hello.cpp
-	$(CPP) -c hello.cpp -o hello.o $(CXXFLAGS)
+Adder.o: Adder.cpp
+	$(CPP) -c Adder.cpp -o Adder.o $(CXXFLAGS)
+
+Calculator.o: Calculator.cpp
+	$(CPP) -c Calculator.cpp -o Calculator.o $(CXXFLAGS)
+
+main_cal.o: main_cal.cpp
+	$(CPP) -c main_cal.cpp -o main_cal.o $(CXXFLAGS)
